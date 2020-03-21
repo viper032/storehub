@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9a93cb04a1.js" crossorigin="anonymous"></script>
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .head
+        {
+            margin-right: 70px;
+            width: 100%;
+            height: 75px;
+            display: flex;
+            position: relative;
+            border-bottom:1px rgb(192, 183, 183) solid;
+        }
+        .user
+        {
+            margin-left: 60px;
+            position: absolute;
+            left: 115px;
+            top: 30px;
+        }
+        .user:hover
+        {
+            cursor: pointer;
+            color: #ee0;
+        }
+        .iconitem
+        {
+            width: 15%;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            top: 30px;
+            right: 100px;
+        }
+        .iconitem i:hover
+        {
+            cursor: pointer;
+            color: #ee0;
+        }
+        .icon {
+            position: absolute;
+            top: -25px;
+            right: 70px;
+            background-color: rgb(255, 230, 0);
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sel select{
+            border: 0; background: transparent;
+        }
+        .header{
+            width: 100%;
+            height: 200px;
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        .header .txt{
+            padding: 60px 170px;
+        }
+        .breadcrumb{
+            display: flex;
+            position: absolute;
+            left: 800px;
+            top: 80px;
+        }
+        .breadcrumb a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .breadcrumb li + li::before{
+            content: "";
+            margin: 0 10px;
+        }
+        .wrap{
+           
+            width: 100%;
+            justify-content: space-around;
+            margin: auto;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        .content1{
+            display: flex;
+            font-size: 40px;
+            margin: 10px;
+        }
+        .content1 img{
+            width: 100%;
+            height: 100%;
+        }
+        .content1 .txt{
+            margin: auto;
+           padding: 40px;
+           line-height: 115px;
+        }
+        .content1 h3{
+            color: yellow;
+        }
+        .content1 button{
+            
+            width: 168px;
+            height: 48px;
+            background-color: black;
+            color: #fff;
+        }
+        .content2{
+            display: flex;
+            width: 100%;
+            font-size: 25px;
+            justify-content: space-around;
+        }
+        .content2 img{
+           width: 250px;
+        }
+        .content2 p{
+            text-align: center;
+            margin-top: -80px;
+        }
+        .content3{
+            padding-left: 150px;
+            margin: auto;
+            display: flex;
+            width: 100%;
+            padding: 65px 159px;
+        }
+        .content3 .item1{
+            position: relative;
+        }
+        .content3 .item2 img{
+           padding: 0 30px 25px;
+        }
+        .content3 .txt{
+            position: absolute;
+            bottom: 120px;
+            left: 50px;
+            color: white;
+        }
+        .content3 .txt a{
+            color: white;
+            font-size: 20px;
+        }
+        .content3 .item2{
+            position: relative;
+        }
+        .content3 .item2 .t .txt{
+            position: absolute;
+            top: 220px;
+           left: 85px;
+        }
+        .content3 .item2 .b .txt{
+            position: absolute;
+            bottom: 170px;
+            left: 85px;
+        }
+        .content4{
+            padding: 0 140px;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .cont4title{
+            width: 100%;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .content4 a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            display: flex;
+        }
+        .content4 a:hover
+        {
+            color:#ee0;
+            cursor:pointer
+        }
+        .content4 img{
+            background-color: #eee;
+        }
+        .content4 .commodity{
+            margin-top: 40px;
+            margin-right: 50px;
+           
+           
+        }
+        .content4 .Buttonseries{
+            display: flex;
+            justify-content: left;
+        }
+        .content4 .buttonseries{
+            font-size: 12px;
+            height: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .content4 .commodity .num{
+            display: flex;
+        }
+        .content4 .Buttonseries{
+            display: flex;
+           
+        }
+        .content5{
+            display: flex;
+            width: 100%;
+            margin-top: 100px;
+        }
+        .content5 .ITEM {
+            width: 500px;
+            height: 470px;
+            padding-left: 100px;
+            background-color: #fff;
+            z-index: 0;
+            margin-top: 15px;
+            margin-right: -320px;
+            margin-left: 150px;
+            box-shadow:0px 0px 30px gray; 
+            
+        }
+        .content5 img{
+            
+            margin-top: 70px;
+        }
+        .content5 .ttxt{
+            text-align: center;
+            margin-left: -100px;
+            margin-top: 95px;
+        }
+        .content5 h3{
+            display: block;
+            font-size: 80px;
+        }
+        .content5 h4{
+            font-size: 80px;
+            display: block;
+        }
+        .content5 .BUTTon{
+            width: 140px;
+            height: 35px;
+            background-color:yellow;
+            text-align: center;
+            margin-left: 125px;
+            margin-top: 30px;
+            line-height: 35px;
+            
+            
+        }
+        .content5 a{
+            text-decoration: none;
+            color: black;
+        }
+        .content6ti
+        {
+            width: 100%;
+            text-align: end;
+            margin-top: 100px;
+            margin-bottom: -130px;
+            margin-right: 450px;
+        }
+        .content6{
+            display: flex;
+            padding-left: 180px;
+            padding-top: 100px;
+        }
+        .leftitem img{
+            margin-left: -210px;
+        }
+        .content6 .leftitem .TXT{
+            color: #fff;
+            margin-top: -130px;
+            margin-left: -170px;
+            font-size: 30px;
+        }
+        .TXT a{
+            color: #fff;
+            font-size: 25px;
+        }
+        .content6 .rightitem
+        {
+            display: flex;
+            
+        }
+  
+        .content6 .BOX
+        {
+           margin-top: 80px;
+           padding: 20px;
+           
+        }
+        .content6 .BOX a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .content6 a:hover
+        {
+            color:#ee0;
+            cursor:pointer
+        }
+        .content6 .BOX .num
+        {
+            display: flex;
+           justify-content: center;
+           margin-left: -75px;
+        }
+        .content6 .Buttonseries
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .content6 .buttonseries{
+            font-size: 12px;
+            height: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .content7ti
+        {
+            width: 100%;
+            margin-top: 180px;
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .content7{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .content7 .Item
+        {
+            width: 350px;
+            margin: 0 30px;
+        }
+        .content7 .Item .article_title
+        {
+            font-size: 19px;
+            line-height: 40px;
+            
+        }
+        .content7 .Item a{
+            color: black;
+            text-decoration: none;
+        }
+        .content7 .Item a:hover
+        {
+            color: #ee0;
+            cursor: pointer;
+        }
+        .content8{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(248, 245, 245);
+            height: 470px;
+            margin-top: 93px;
+        }
+        .content8 .ITem
+        {
+            
+           margin: 100px 100px 10px -25px;
+            display: flex;
+        }
+        .content8 .footeritem{
+            margin-left: 200px;
+            line-height: 38px;
+            justify-content: center;
+        }
+        .content8 .footeritem h3{
+            font-size: 20px;
+        }
+        .content8 .ITem a{
+            color: black;
+            text-decoration: none;
+        }
+        .content8 .ITem a:hover
+        {
+            color: #ee0;
+            cursor: pointer;
+        }
+        .footer{
+            background-color: yellow;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="user">
+            <i class="fa fa-user" aria-hidden="true"></i> My account
+        </div>
+        <div class="iconitem">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <div class="icon">0</div>
+            <div class="sel">
+                <form action="">
+                    <select name="" id="">
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="header">
+             <div class="txt">
+                <img src="hw03/asset 1.png" alt="">
+                <h3>HEALTLY FOOD</h3>
+            </div>
+        <ul class="breadcrumb">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUTUS</a></li>
+            <li><a href="#">COLLECTIONS</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">SALE</a></li>
+            <li><a href="#">CONTACTUS</a></li>
+        </ul>
+        </div>
+    
+        <div  class="content1">
+            <img src="hw03/asset 14.png" alt="">
+            <div class="txt">
+                <h2>Fresh and Delicious</h2>
+                <h3>ALL YEAR ROUND!</h3>
+                <button>READ MORE</button>
+            </div>    
+        </div>
+        <div class="content2">
+            <div class="item">
+                <img src="hw03/asset 50.png" alt="">
+                <p>
+                    <strong>Fruits</strong>
+                </p>
+            </div>
+            <div class="item">
+                <img src="hw03/asset 51.png" alt="">
+                <p>
+                    <strong>Veggies</strong>
+                </p>
+            </div>
+            <div class="item">
+                <img src="hw03/asset 52.png" alt="">
+                <p>
+                    <strong>Fish</strong>
+                </p>
+            </div>
+            <div class="item">
+                <img src="hw03/asset 53.png" alt="">
+                <p>
+                    <strong>Nuts&Seeds</strong>
+                </p>
+            </div>
+            <div class="item">
+                <img src="hw03/asset 54.png" alt="">
+                <p>
+                    <strong>Bread</strong>
+                </p>
+            </div>
+            <div class="item">
+                <img src="hw03/asset 55.png" alt="">
+                <p>
+                    <strong>Dairy</strong>
+                </p>
+            </div>
+        </div>
+        <div class="content3">
+            <div class="item1">
+                <img src="hw03/asset 56.png" alt="">
+                <div class="txt">
+                    <h1>Best Quality Products</h1>
+                    <a href="#">Shop now</a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="t">
+                    <img src="hw03/asset 57.png" alt="">
+                    <div class="txt">
+                        <h1>Hot Deals:<br>CRAZY PRICE $2.99</h1>
+                        <a href="#">Shop now</a>
+                    </div>
+                </div>
+                <div class="b">
+                    <img src="hw03/asset 58.png" alt="">
+                    <div class="txt">
+                        <h1>HURRY UP!</h1>
+                        <p>Don't miss your chance to be the first!</p>
+                        <a href="#">Shop now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont4title">
+            <h2>Featured Products</h2>
+        </div>
+        <div class="content4">
+            <div class="commodity">
+                <img src="hw03/asset 9.png" alt="">
+                <a href="">P28 Foods Formulated...</a>
+                <div class="num">
+                    <p style="text-decoration:line-through;color:#999;">$26.00</p>
+                    <p>$20.00</p>
+                </div>
+                <div class="Buttonseries">
+                    <div class="buttonseries">
+                        <i class="fas fa-shopping-cart" aria-hidden="true">
+                            ADD TO CART
+                        </i>
+                    </div>
+                    <div class="buttonseries">
+                        <i class="far fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <div class="buttonseries">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="commodity">
+                <img src="hw03/asset 10.png" alt="">
+                <a href="">P28 Foods Formulated...</a>
+                <div class="num">
+                    <p>$29.00-$36.00</p>
+                </div>
+                <div class="Buttonseries">
+                    <div class="buttonseries">
+                        <i class="fas fa-shopping-cart" aria-hidden="true">
+                            CHOOSE VARIANT
+                        </i>
+                    </div>
+                    <div class="buttonseries">
+                        <i class="far fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <div class="buttonseries">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="commodity">
+                <img src="hw03/asset 11.png" alt="">
+                <a href="">KIND Nuts & Spices,...</a>
+                <div class="num">
+                    <p>$12.00-$30.00</p>
+                </div>
+                <div class="Buttonseries">
+                    <div class="buttonseries">
+                        <i class="fas fa-shopping-cart" aria-hidden="true">
+                            CHOOSE VARIANT
+                        </i>
+                    </div>
+                    <div class="buttonseries">
+                        <i class="far fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <div class="buttonseries">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="commodity">
+                <img src="hw03/asset 12.png" alt="">
+                <a href="">Justin's Nut Butter...</a>
+                <div class="num">
+                    <p style="text-decoration:line-through;color:#999;">$33.00</p>
+                    <p>$22.00</p>
+                </div>
+                <div class="Buttonseries">
+                    <div class="buttonseries">
+                        <i class="fas fa-shopping-cart" aria-hidden="true">
+                            ADD TO CART
+                        </i>
+                    </div>
+                    <div class="buttonseries">
+                        <i class="far fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <div class="buttonseries">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content5">
+            <div class="ITEM">
+                <div class="ttxt">
+                    <h3>20% OFF</h3>
+                    <h4>Fresh Berries</h4>
+                </div>
+                <div class="BUTTon">
+                    <a href="">SHOP NOW</a>
+                </div>
+            </div>
+            <div class="PIC">
+                <img src="hw03/asset 40.png" alt="">
+            </div>
+        </div>
+        <div class="content6ti">
+            <h2>On Sale</h2>
+        </div>
+        <div class="content6">
+            <div class="leftitem">
+                <img src="hw03/asset 59.png" alt="">
+                <div class="TXT">
+                    <h3>Looking for something special?</h3>
+                    <a href="">Shop now</a>
+                </div>
+            </div>
+            <div class="rightitem">
+                <div class="rlitem">
+                    <div class="BOX">
+                        <img src="hw03/asset 41.png" alt="">
+                        <a href="">P28 Foods Formulated...</a>
+                        <div class="num">
+                            <p style="text-decoration:line-through;color:#999;">$26.00</p>
+                            <p>$20.00</p>
+                        </div>
+                        <div class="Buttonseries">
+                            <div class="buttonseries">
+                                <i class="fas fa-shopping-cart" aria-hidden="true">
+                                ADD TO CART
+                                </i>
+                            </div>
+                            <div class="buttonseries">
+                                <i class="far fa-eye" aria-hidden="true"></i>
+                            </div>
+                            <div class="buttonseries">
+                                <i class="fas fa-heart-broken"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="BOX">
+                        <img src="hw03/asset 45.png" alt="">
+                        <a href="">P28 Foods Formulated...</a>
+                        <div class="num">
+                            <p style="text-decoration:line-through;color:#999;">$26.00</p>
+                            <p>$20.00</p>
+                        </div>
+                        <div class="Buttonseries">
+                            <div class="buttonseries">
+                                <i class="fas fa-shopping-cart" aria-hidden="true">
+                                ADD TO CART
+                                </i>
+                            </div>
+                            <div class="buttonseries">
+                                <i class="far fa-eye" aria-hidden="true"></i>
+                            </div>
+                            <div class="buttonseries">
+                                <i class="fas fa-heart-broken"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rritem">
+                    <div class="BOX">
+                        <img src="hw03/asset 43.png" alt="">
+                        <a href="">P28 Foods Formulated...</a>
+                        <div class="num">
+                            <p style="text-decoration:line-through;color:#999;">$26.00</p>
+                            <p>$20.00</p>
+                        </div>
+                        <div class="Buttonseries">
+                            <div class="buttonseries">
+                                <i class="fas fa-shopping-cart" aria-hidden="true">
+                                ADD TO CART
+                                </i>
+                            </div>
+                            <div class="buttonseries">
+                                <i class="far fa-eye" aria-hidden="true"></i>
+                            </div>
+                            <div class="buttonseries">
+                                <i class="fas fa-heart-broken"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="BOX">
+                        <img src="hw03/asset 47.png" alt="">
+                        <a href="">P28 Foods Formulated...</a>
+                        <div class="num">
+                            <p style="text-decoration:line-through;color:#999;">$26.00</p>
+                            <p>$20.00</p>
+                        </div>
+                        <div class="Buttonseries">
+                            <div class="buttonseries">
+                                <i class="fas fa-shopping-cart" aria-hidden="true">
+                                ADD TO CART
+                                </i>
+                            </div>
+                            <div class="buttonseries">
+                                <i class="far fa-eye" aria-hidden="true"></i>
+                            </div>
+                            <div class="buttonseries">
+                                <i class="fas fa-heart-broken"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content7ti">
+            <h2>Featured Posts</h2>
+        </div>
+        <div class="content7">
+            <div class="Item">
+                <img src="hw03/asset 60.png" alt="">
+                <p class="article_date">
+                    <span class="article_day">29</span>
+                January
+                </p>
+                <p class="article_title"><a href="/blogs/news/be-enjoyed-visually-only">12 Heavenly Fruits and Honey</a></p>
+                <p class="article_content">
+                    Caffeine and sugar may give you an energy spike, but the crash that follows will leave you feeling even more tired than before. However, great...						
+                </p>
+            </div>
+            <div class="Item">
+                <img src="hw03/asset 61.png" alt="">
+                <p class="article_date">
+                    <span class="article_day">29</span>
+                January
+                </p>
+                <p class="article_title"><a href="/blogs/news/be-enjoyed-visually-only">The Great Start of Your Weight</a></p>
+                <p class="article_content">
+                    Kids need energy for sports and play, so it’s important that they’re consuming a nutrient-dense snack about an hour before their activity that contains carbohydrates....
+                </p>
+            </div>
+            <div class="Item">
+                <img src="hw03/asset 62.png" alt="">
+                <p class="article_date">
+                    <span class="article_day">29</span>
+                January
+                </p>
+                <p class="article_title"><a href="/blogs/news/be-enjoyed-visually-only">The Products that Help You Boost the Energy</a></p>
+                <p class="article_content">
+                    Hello, my dears! My name is mary and here, in my blog, I want to share with you my findings and useful thoughts about making...						
+                </p>
+            </div>
+        </div>
+        <div class="content8">
+            <div class="ITem">
+                <div class="footeritem">
+                    <h3>
+                        Information
+                    </h3>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footeritem">
+                    <h3>
+                        MyAccount
+                    </h3>
+                    <ul>
+                        <li><a href="">My Account</a></li>
+                        <li><a href="">OrderHistory</a></li>
+                        <li><a href="">Addresses</a></li>
+                        <li><a href="">Wishlist</a></li>
+                    </ul>
+                </div>
+                <div class="footeritem">
+                    <h3>
+                        Our Shop
+                    </h3>
+                    <ul>
+                        <li>
+                            <h5>
+                                Address
+                            </h5>
+                            4578MarmoraSt,SanFranciscoD0489GR
+                        </li>
+                        <li>
+                            <h5>
+                                Phone
+                            </h5>
+                            <a href="">1-800-1234-567</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footeritem">
+                    <h3>
+                        Newsletter
+                    </h3>
+                    Join our mailing list
+                    <input type="email" name="contact[email]" class="input-group__field newsletter__input" placeholder="Enter your email"> <button class="btn" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        ©Healtly Food . Powered by Shopify
+    </div>
+</body>
+</html>
