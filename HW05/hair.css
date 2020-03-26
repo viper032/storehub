@@ -1,0 +1,485 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+}
+
+.rowl {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+.TOP {
+    position: relative;
+}
+
+.TOP img {
+    width: 100%;
+}
+
+.TOP .TXT {
+    color: white;
+    width: 31%;
+    text-align: right;
+    font-size: 29px;
+    font-weight: 350;
+    line-height: 35px;
+    position: absolute;
+    top: 21%;
+    left: 15%;
+}
+.TOP .Txt{
+    color: white;
+    width: 25%;
+    font-weight: 350;
+    line-height: 35px;
+    position: absolute;
+    bottom: 0%;
+    right: 15%;
+}
+.TOP .txt{
+    width: 208px;
+    height: 80px;
+    position: absolute;
+    border: none;
+    bottom: 0%;
+    left: 44%;
+}
+.TOP .txt:hover{
+   background-color: black;
+   
+}
+.TOP .txt a{
+    color: black;
+    text-decoration: none;
+}
+.TOP .txt a:hover{
+    color: white;
+    
+}
+@media screen and (max-width:768px){
+    .TOP .TXT {
+    font-size: 15px;   
+   }
+    .TOP .Txt{
+    font-size: 9px;
+    width: 100%;
+   }
+   .TOP .txt{
+    width: 10%;
+    height: 10%;
+    font-size: 1px;
+   }
+}
+
+.breadcrumb {
+    justify-content: center;
+    padding: 20px 0 20px 0;
+    
+}
+.bread{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+.breadcrumb-item::before {
+    margin: 0 20px;
+}
+
+.breadcrumb a {
+    color: black;
+}
+
+.breadcrumb-item :hover {
+    color: orchid;
+    text-decoration: none;
+}
+
+.Thrcolumns {
+    height: 230px;
+    margin-top: 160px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 160px;
+}
+
+.Thrcolumns h3 {
+    font-size: 49px;
+}
+
+.Thrcolumns a {
+    text-decoration: none;
+    color: black;
+}
+
+.pormo {
+    margin-top: 50px;
+    display: flex;
+    position: relative;
+}
+
+.pormo img {
+    width: 100%;
+    
+}
+.pormotxt{
+    position: absolute;
+    bottom: 9%;
+    right: 10%;
+    text-align: left;
+    
+}
+.pormotxt h2{
+    font-size: 95px;
+    color: white;
+    line-height: 50px;
+}
+.pormotxt h3{
+    font-size: 95px;
+    font-weight: 100;
+}
+.pormotxt h4{
+    
+    font-weight: 100;
+}
+.pormotxt .Txt{
+    width: 120px;
+    height: 45px;
+    border: 3px solid black;
+    text-align: center;
+}
+.pormotxt .Txt a{
+    color: black;
+    text-decoration: none;
+}
+.pormotxt .Txt:hover{
+    background-color: black;
+}
+.pormotxt .Txt a:hover{
+    color: white;
+}
+@media screen and (max-width:768px){
+    .pormotxt h2{
+        font-size:15px;
+        line-height: 10px;
+        
+    }
+    .pormotxt h3{
+        font-size:15px;
+        
+    }
+    .pormotxt h4{
+        font-size:15px;
+        
+    }
+}
+.categorytitle{
+    margin-top: 90px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.categorytitle h2{
+    font-size: 40px;
+}
+.category .items{
+    justify-content: center;
+}
+.category .items a{
+    color: black;
+    text-decoration: none;
+}
+.category .items:hover{
+    background-color: pink;
+}
+.category img{
+    width: 100%;
+}
+.items_txt{
+    
+    text-align: center;
+}
+.items_txt h4{
+    margin-top: 50px;
+}
+.category .items_txt_b{
+    background-color: white;
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+    border: 3px solid black;
+    text-align: center;
+}
+.category .items_txt_b:hover{
+    background-color: black;
+}
+.category .items_txt_b a:hover{
+    color: white;
+}
+.argan .Items{
+    justify-content: center;
+}
+.argan .Items a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+.argan img{
+    width: 100%;
+}
+.Itemstxt{
+    
+    text-align: center;
+    margin-top: 10px;
+}
+
+.argan .Itemstxtb{
+    background-color: white;
+    margin-top: 17px;
+    width: 120px;
+    height: 40px;
+    border: 3px solid black;
+    text-align: center;
+}
+.argan .Itemstxtb a{
+    font-size: 15px;
+}
+.ITemssp{
+    font-size: 28px;
+}
+.argan .Itemstxtb:hover{
+    background-color: black;
+}
+.argan .Itemstxtb a:hover{
+    color: white;
+}
+.argan .ITemsic{
+    margin-top: 15px;
+}
+.argan .ITemsic a {
+    color: gray
+}
+.argan .ITemsic a:hover {
+    color: pink;
+}
+.Blog img{
+    margin-top: 10px;
+    width: 100%;
+    margin-top: 25px;
+}
+.Blog .ITems{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.ITems h3{
+    font-size: 20px;
+    margin-top: 25px;
+    
+}
+.ITems .ITha a{
+    color: black;
+    text-decoration: none;
+}
+.ITems .ITha a:hover{
+    color: pink;
+    
+}
+.ITems .Txt{
+    width: 120px;
+    height: 45px;
+    border: 3px solid black;
+    text-align: center;
+    background-color: white;
+    margin-top: 35px;
+}
+.ITems .Txt a{
+    color: black;
+    text-decoration: none;
+}
+.Blog .Txt:hover{
+    background-color: black;
+}
+.Blog .Txt a:hover{
+    color: white;
+}
+.instyle .ItEms{
+    justify-content: center;
+}
+.instyle .ItEms a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+.instyle img{
+    width: 100%;
+}
+.ItEmstxt{
+    
+    text-align: center;
+    margin-top: 10px;
+}
+.ItEmstxt a:hover{
+    color: rgb(159, 213, 235);
+    
+}
+
+.instyle .ItEmstxtb{
+    background-color: white;
+    margin-top: 17px;
+    width: 120px;
+    height: 40px;
+    border: 3px solid black;
+    text-align: center;
+}
+.instyle .ItEmstxtb a{
+    font-size: 15px;
+}
+.ITEmssp{
+    font-size: 20px;
+    font-weight: 800;
+}
+.instyle .ItEmstxtb:hover{
+    background-color: black;
+}
+.instyle .ItEmstxtb a:hover{
+    color: white;
+}
+.instyle .ITEmsic{
+    margin-top: 15px;
+}
+.instyle .ITEmsic a {
+    color: gray
+    
+}
+.instyle .ITEmsic a:hover {
+    color: pink;
+}
+.GETOUR{
+    background-color: rgb(177, 223, 241);
+    height: 500px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.GETOUR .but{
+    display: flex;
+    justify-content: center;
+}
+.GETOUR .title{
+    padding: 70px 0 0 0;
+}
+.GETOUR h3{
+    font-size: 25px;
+}
+.GETOUR h4{
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+.ItEmsTxtb{
+    margin-bottom: 70px;
+}
+.GETOUR .ItEmsTxtb{
+    background-color: rgb(177, 223, 241);
+    width: 120px;
+    height: 40px;
+    border: 3px solid black;
+    text-align: center;
+    
+}
+.GETOUR .ItEmsTxtb a{
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+.GETOUR .ItEmsTxtb:hover{
+    background-color: black;
+}
+.GETOUR .ItEmsTxtb a:hover{
+    color: white;
+}
+.GETOUR .icon ul{
+    display: flex;
+   justify-content: center;
+   padding: 30px;
+}
+.GETOUR .icon li a{
+    padding: 15px;
+    color: black;
+}
+.GETOUR .icon li{
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:60px;
+    height:60px;
+    border: 2px solid #000;
+    border-radius: 999em;
+}
+.tail{
+    background-color: black;
+    padding: 0 160px;
+}
+
+.tail .ITEMs{
+    height: 550px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    padding: 90px 0 0 0;
+    line-height: 40px;
+}
+.tail .ITEMss{
+    height: 550px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    padding: 90px 0 0 0;
+}
+.ITEMs a{
+    color: white;
+    text-decoration: none;
+}
+.ITEMs a:hover{
+    color: rgb(177, 223, 241);
+}
+.ITEMss img{
+    width: 90%;
+    padding: 0 0 25px 0;
+}
+.ITEMs h3{
+    font-size: 20px;
+    padding: 0 0 25px 0;
+}
+.footer{
+    background-color: rgb(46, 42, 42);
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    padding: 0 89px;
+}
+@media screen and (max-width:768px){
+    .tail .ITEMs{
+        font-size: 15px;
+    }
+    .tail .ITEMss{
+        font-size: 15px;
+    }
+    .ITEMs h3{
+        font-size: 15px;
+    }
+}
